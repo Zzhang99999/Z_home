@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 改变盒子的属性 -->
+    属性名：<input type="text" class="inp1"> <br> <br>
+    属性值：<input type="text" class="inp2"> <br> <br>
+    <button class="but1">确定</button> <button class="but2">重置</button> <br><br>
+    <div class="box">
+       在上方输入框输入"属性名"及"属性值",点击确定按钮查看效果 
+    </div>
+</body>
+<script> 
+     var inp1=document.querySelector(".inp1")
+     var inp2=document.querySelector(".inp2")
+     var but1=document.querySelector(".but1")
+     var but2=document.querySelector(".but2")
+     var box=document.querySelector("box")
+    
+     var getlist=function(hezi,kuang1,kuang){ 
+         console.log(kuang1) 
+         hezi.style[kuang1]=kuang 
+     }
+     but1.onclick=function(){
+        //   getlist(box,inp1.value,inp2.value)
+        getlist(box,inp1.value,inp2.value)
+          console.log(inp1.value) 
+     }
+
+     
+
+
+
+</script>
+</html>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        color: white;
+
+    }
+</style>

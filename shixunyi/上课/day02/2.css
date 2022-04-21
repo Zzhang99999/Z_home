@@ -1,0 +1,173 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    max-width: 750px;
+    min-width: 300px;
+    font-size: 15px;
+}
+
+html {
+    background-color: #f2f2f2;
+}
+
+.wang {
+    font-size: .13rem;
+}
+
+.box1 {
+    width: .3rem;
+    height: .3rem;
+    border-radius: .3rem;
+    font-size: .13rem;
+}
+
+/* span {
+    display: flex;
+    align-items: center;
+    font-size: .13rem;
+} */
+
+ .box2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    font-size: .1rem;
+}
+
+.box3 {
+    width: .3rem;
+    height: .3rem;
+    font-size: .13rem;
+} 
+
+ .box4 {
+    width: 100%;
+    overflow: hidden;
+    height: 6rem;
+    background-color: turquoise;
+    border-radius: .1rem;
+    font-size:  13px;
+    margin-top: .4rem;
+}
+
+.box5 {
+    padding: .1rem;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: .13rem;
+} 
+.box6 {
+    width: 100%;
+    height: 1.5rem;
+    background-color: white;
+    border-radius: .1rem;
+    font-size: .15rem;
+    display: flex;
+    margin-top: -0.4rem;
+    box-shadow: .05rem .05rem .05rem #ddd;
+
+}
+.box6-2{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box6-1 {
+    width: .5rem;
+    height: .5rem;
+    border-radius: .08rem;
+}
+
+/* .box7 {
+    width: 100%;
+    height: .6rem;
+    background-color: white;
+    font-size: .13rem;
+} */
+
+.box8 {
+    margin-top: 1.4rem;
+} 
+
+.box8-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px .1rem;
+    font-size: .13rem;
+    background-color: white;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+}
+
+.qianyue {
+    font-size: .18rem;
+}
+
+.geng {
+    font-size: .12rem;
+    color: #ddd;
+}
+
+.box9 {
+    width: 100%;
+    background-color: white;
+    border-radius: .1rem;
+    padding: .1rem;
+    box-shadow: .03rem .03rem .03rem #ddd;
+    margin-bottom: .05rem;
+    font-size: .13rem;
+}
+
+ .box9-1 {
+    width: .8rem;
+    height: .8rem;
+    font-size: .13rem;
+} 
+
+.box9-3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: .13rem;
+}
+
+.shen {
+    color: red;
+    font-size: .13rem;
+}
+
+.jigou {
+    width: .8rem;
+    height: .3rem;
+    line-height: .3rem;
+    background-color: paleturquoise;
+    text-align: center;
+    font-size: .13rem;
+}
+
+.box10 {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    bottom: 0rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: .13rem;
+}
+.box10-1{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+.tab {
+    width: .8rem;
+    height: .8rem;
+    font-size: .13rem;
+} 

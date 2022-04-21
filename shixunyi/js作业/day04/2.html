@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1">
+       <div class="box1-1">
+           <div class="shang"><b>1月</b></div> 
+           <div>1月</div>
+       </div>
+       <div class="box1-1">
+           <div class="shang"><b>2月</b></div> 
+           <div>2月</div>
+       </div>
+       <div class="box1-1">
+           <div class="shang"><b>3月</b></div> 
+           <div>3月</div>
+       </div>
+       <div class="box1-1">
+           <div class="shang"><b>4月</b></div> 
+           <div>4月</div>
+       </div>
+       <div class="box1-1">
+           <div class="shang"><b>5月</b></div> 
+           <div>5月</div>
+       </div>
+       <div class="box1-1" >
+           <div class="shang"><b>6月</b></div> 
+           <div>6月</div>
+       </div>
+       <div class="box1-1">
+           <div class="shang"><b>7月</b></div> 
+           <div>7月</div>
+       </div>
+       <div class="box1-1">
+           <div class="shang"><b>8yue</b></div> 
+           <div>8yue</div>
+       </div>
+       <div class="box1-1">
+           <div class="shang"><b>9月</b></div> 
+           <div>9月</div>
+       </div>
+       <div class="box1-1">
+           <div class="shang"><b>10月</b></div> 
+           <div>10月</div>
+       </div>
+       <div class="box1-1">
+           <div class="shang"><b>11月</b></div> 
+           <div>11月</div>
+       </div>
+       <div class="box1-1">
+           <div class="shang"><b>12月</b></div> 
+           <div>12月</div>
+       </div>
+    </div>
+
+
+    <div class="box2">
+         <div class="jr">
+             <b>一月节日</b>元旦：1月1日至3日放假3天
+         </div> 
+         <div class="jr">
+             <b>2月节日</b>2222222222
+         </div> 
+         <div class="jr">
+             <b>3月节日</b>33333333333
+         </div> 
+         <div class="jr">
+             <b>4月节日</b>344444444444444
+         </div> 
+         <div class="jr">
+             <b>5月节日</b>555555555
+         </div> 
+         <div class="jr">
+             <b>6月节日</b>6666666666 
+         </div> 
+         <div class="jr">
+             <b>7月节日</b>7777777777777
+         </div> 
+         <div class="jr">
+             <b>8月节日</b>88888888888
+         </div> 
+         <div class="jr">
+             <b>9月节日</b>99999999999999
+         </div> 
+         <div class="jr">
+             <b>10月节日</b>10000000000000
+         </div> 
+         <div class="jr">
+             <b>11月节日</b>11111111111111111
+         </div> 
+         <div class="jr">
+             <b>12月节日</b>12222222222222
+         </div> 
+    </div>
+</body>
+<script>
+    var box=document.querySelectorAll(".box1-1")
+    var jr=document.querySelectorAll(".jr")
+
+    for(var a=0;a<box.length;a++){
+         box[a].setAttribute("a",a) 
+         box[a].onmouseover=function(){
+              for(var b=0;b<jr.length;b++){
+                   jr[b].style.display="none"
+              }
+              var index=this.getAttribute("a")
+              jr[index].style.display="block"
+         }
+    }
+</script>
+</html>
+<style>
+    .box1{
+        width: 490px;
+        height: 480px;
+        background-color: honeydew;
+        margin: 0 auto;
+        border:  10px solid   lavender;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box1-1{
+        width: 100px;
+        height: 100px;
+        background-color: gold;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px  10px;
+        margin-top: 30px;
+        border: 1px solid gold;
+    }
+    .shang{
+        margin-top: 15px;
+    }
+    .box1-1:hover{
+        background-color: white;
+        color: red;
+        border: 1px solid black;
+    }
+    .jr{
+        display: none;
+        width: 490px;
+        height: 100px;
+        background-color: honeydew;
+        border: 10px solid lavender;
+        margin: 0 auto;
+    }
+</style>

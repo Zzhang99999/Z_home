@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p> <button class="dian">输入法</button></p>
+   <div class="box">
+     
+          <option value="手写">手写</option> 
+          <option value="拼音">拼音</option> 
+          <option value="关闭" class="guan">关闭</option>
+     
+   </div>
+</body>
+<script>
+var dian=document.querySelector(".dian")
+var box=document.querySelector(".box")
+var guan=document.querySelector(".guan")
+var isshow=false
+dian.onclick=function(){  
+    console.log(11) 
+    isshow=!isshow  
+    console.log(isshow) 
+    box.style.display= isshow ? "block" :'none'
+}
+guan.onclick=function(){
+    box.style.display= "none"
+}
+</script>
+</html>
+<style>
+p{
+    text-align: center;
+}
+div{
+    width: 50px;
+    display: none;  
+    border: 1px solid blue; 
+    margin:  0 auto;
+}
+.guan{
+    border-top: 1px solid blue; 
+}
+option:hover{
+     background-color: skyblue;
+}
+</style>

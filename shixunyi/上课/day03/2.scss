@@ -1,0 +1,84 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    max-width: 750px;
+    min-width: 300px;
+    font-size: 15px;
+    background-color: whitesmoke;
+}
+header{
+    width: 100%;
+    display: flex;
+    background-color: white;
+    .left{
+        width: 15%;
+        text-align: center;
+    }
+    .title{
+        width: 70%;
+        text-align: center;
+
+    }
+    .you{
+        width: 15%;
+    }
+}
+.box{
+    width: 100%;
+    height: .7rem;
+    line-height: .7rem;
+    padding-left: .2rem;
+    margin: .4rem 0px;
+}
+.box1{
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    // line-height: 3rem;
+    display: flex;
+   
+    .box1-1{
+        width: 1rem;
+        height: 1rem;
+        border-radius: .25rem;
+    }
+    .box1-2{
+        float: left;
+    }
+   .box1-3{
+       height: 100%;
+       width: 50%;
+        display: flex;
+        // flex-direction：column;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 3rem;
+        font-size: .12rem;
+        span{
+            margin-right: .4rem;
+        }
+         img{
+             width: .5rem;
+             height: .5rem;
+         }
+         .huang{
+             background-color: yellow;
+             color: yellowgreen;
+         }
+         .red{
+             background-color: hotpink;
+             color: pink;
+         }
+         .lan{
+             background-color: powderblue;
+             color: blue;
+         }
+        
+    }
+}
+.box1-2{
+     line-height: 3rem;
+}

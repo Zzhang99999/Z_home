@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1"> <button>点击将div变成红色</button></div>
+    <div class="box">
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+<script>
+    var box1 = document.querySelector(".box1")
+    var box2 = document.querySelectorAll(".box2")
+    box1.onclick= function(){ 
+        for(var i=0; i<box2.length ;i++){ 
+             box2[i].style.background="red" 
+        }
+    }
+</script>
+</html>
+<style>
+    .box1{
+        text-align: center;
+    }
+    .box{
+        width: 25%; 
+        display: flex;
+        margin: 0 auto;
+    }
+    .box2{
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        margin: 10px; 
+    }
+</style>

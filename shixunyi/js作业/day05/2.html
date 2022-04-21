@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <p>kitty展示</p>
+
+        <div class="box1">
+            <div class="box2">
+                <div class="kitty">kitty</div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div>
+            <div class="box2">
+                <div class="kitty">kitty</div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div>
+            <div class="box2">
+                <div class="kitty">kitty</div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div>
+            <div class="box2">
+                <div class="kitty">kitty</div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div>
+            <div class="box2">
+                <div class="kitty">kitty</div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div>
+            <div class="box2">
+                <div class="kitty">kitty</div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div> 
+            <div class="box2"> 
+                <div class="kitty">kitty</div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div>
+            <div class="box2"> 
+                <div class="kitty">kitty</div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div>  
+        </div> 
+    </div> 
+</body> 
+<script> 
+    var box2=document.querySelectorAll(".box2") 
+    var iii=document.querySelectorAll(".iii") 
+    console.log(iii) 
+    for(var i=0;i<box2.length;i++){
+         box2[i].onmouseover=function(){
+              for(var j=0;j<iii.length;j++){
+                  console.log(this) 
+                iii[j].style.display="block"
+              }
+         }
+    }
+</script>
+</html>
+<style>
+    .box{
+        width: 600px;
+        height: 400px;
+        border: 3px solid gold;
+        margin: 0 auto;
+    }
+    p{
+        text-align: center;
+    }
+    .box1{
+        width: 98%;
+        height: 80%;
+        background-color: honeydew;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box2{ 
+        margin: 0 1.9px;
+        position: relative;
+    }
+    img{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+    }
+    .iii{
+        display: none;
+    }
+    .kitty{
+        margin-top: 20px;
+        text-align: center;
+        width: 150px;
+        height: 130px;
+        border: 1px solid #ddd;
+    }
+</style>

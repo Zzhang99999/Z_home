@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box1"> 
+        <button class="wid">变宽</button>
+        <button class="hei">变高</button>
+        <button class="col">变色</button>
+        <button class="dis">隐藏</button>
+        <button class="out">重置</button>
+    </div>
+
+    <div id="box">
+
+    </div>
+</body>
+
+<script>
+    var box = document.getElementById('box')
+    var wid = document.querySelector('.wid')
+    var hei = document.querySelector(".hei")
+    var col = document.querySelector(".col")
+    var dis = document.querySelector(".dis")
+    var out = document.querySelector(".out")
+    wid.onclick = function () {
+        box.style.width = '200px'
+    }
+    hei.onclick = function () {
+        box.style.height = "200px"
+    }
+    col.onclick = function () {
+        box.style.backgroundColor = ("pink")
+    }
+    dis.onclick = function () {
+        box.style.display = "none"
+    }
+    out.onclick = function () {
+        box.style.display = "block"
+        box.style.width = "100px"
+        box.style.height = "100px"
+        box.style.backgroundColor = ("black")
+    }
+
+
+</script>
+
+</html>
+<style>
+    #box {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        display: block;
+        margin:  10px  auto ; 
+    }
+    .box1{
+        text-align:  center;
+    }
+</style>
