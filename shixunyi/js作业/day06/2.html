@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <p>kitty展示</p>
+
+        <div class="box1">
+            <div class="box2"> 
+                <div class="kitty">kitty <strong>凯迪猫</strong>  </div>  
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div>
+            <div class="box2">
+                <div class="kitty">kitty<strong>凯迪猫</strong></div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div>
+            <div class="box2">
+                <div class="kitty">kitty<strong>凯迪猫</strong></div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div>
+            <div class="box2"> 
+                <div class="kitty">kitty<strong>凯迪猫</strong></div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div>  
+            </div>
+            <div class="box2">
+                <div class="kitty">kitty<strong>凯迪猫</strong></div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div>
+            <div class="box2">
+                <div class="kitty">kitty<strong>凯迪猫</strong></div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div> 
+            <div class="box2"> 
+                <div class="kitty">kitty<strong>凯迪猫</strong></div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt=""> </div> 
+            </div> 
+            <div class="box2"> 
+                <div class="kitty">kitty<strong>凯迪猫</strong></div> 
+                <div class="iii"> <img src="./src=http___ci.xiaohongshu.com_86233825-3e2b-7279-d656-12fff2957c3e_imageView2_2_w_1080_format_jpg&refer=http___ci.xiaohongshu.webp" alt="">  </div>  
+            </div>  
+        </div> 
+    </div> 
+</body> 
+<script> 
+     var box2=document.querySelectorAll(".box2")
+     console.log(box2)
+     var img=document.querySelectorAll("img")
+     console.log(img) 
+  
+    for (let i = 0; i < box2.length; i++) {
+         box2[i].index=img[i].index=i
+         box2[i].onmouseover=function(){
+              box2[this.index].className="zindex"
+              img[this.index].style.display="block"
+         }
+         box2[i].onmouseout=function(){
+              box2[this.index].className=""
+              img[this.index].style.display="" 
+         }
+
+       
+    }
+
+</script>
+</html>
+<style lang="scss">
+    .box{
+        width: 600px;
+        height: 400px;
+        border: 3px solid gold;
+        margin: 0 auto;
+    }
+    p{
+        text-align: center;
+    }
+    .box1{
+        width: 98%;
+        height: 85%;
+        background-color: honeydew;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box2{ 
+        margin: 0 1.9px;
+        display: flex;
+        justify-content: center;
+      
+    }
+    img{
+        width: 200px;
+        height: 200px;
+        position: fixed;
+        
+        cursor:crosshair;
+        border: 1px solid black;
+        display: none;
+        
+    }
+    .kitty{
+        
+        text-align: center;
+        width: 140px;
+        height: 130px;
+        border: 1px solid #ddd;
+        position: relative;
+        z-index: 10001;
+    }
+    .zindex{z-index: 1;}
+</style>
