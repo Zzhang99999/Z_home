@@ -5,6 +5,7 @@
  import Axios from 'axios'
  import encConfig from './env'
  import { Message } from 'element-ui'
+import router from '@/router'
  
  //创建axios实例
  const service = Axios.create({
@@ -16,17 +17,22 @@
  //创建请求拦截器
  service.interceptors.request.use(
    (config) => {
+    //  console.log("congif",config)
+     if(config.url!=='/login'){
+         const token=sessionStorage.getItem('token') 
+         token && ( config.headers['Authorization']=token) 
+     }
      return config
    },
    (error) => {
-     return Promise.reject(error)
+     return Promise.reject(error) 
    }
  )
- 
+
  //创建响应拦截器
  service.interceptors.response.use(
    (res) => {
-     console.log('res:::', res)
+    //  console.log('res:::', res)
      const {
        meta: { msg, status: code },
        data: result
@@ -38,18 +44,20 @@
          type: 'success'
        })
  
-       if (res.config.url === '/login') {
+       if (res.config.url === '/') {
          sessionStorage.setItem('token', result.token)
        }
  
        return result
      }
  
-     Message({
-       message: msg,
-       type: 'error'
-     })
- 
+    //  Message({
+    //    message: msg,
+    //    type: 'error'
+    //  })
+     if(msg==='无效token'){
+       router.replace('/login') 
+     }
      return Promise.reject(msg)
    },
    (error) => {

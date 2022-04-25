@@ -1,24 +1,55 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import login from '../views/login.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'login',
+    component: login
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import('../views/AboutView.vue')
+    path: '/index',
+    name: 'index',
+    component: () => import('../views/index.vue'),
+    redirect: '/hello',
+    children:[
+     
+      {
+        path: '/hello',
+        name: 'hello',
+        component: () => import('../views/hello.vue')
+      },
+      {
+        path: '/users',
+        name: 'users',
+        component: () => import('../views/users.vue')
+      }
+    ]
   }
 ]
 
 const router = new VueRouter({
   routes
 })
+router.beforeEach((to,from,next)=>{
+  //  console.log(to) 
+   const flag=to.matched.some(item=>{
+      return  item.meta.auth
+   })
+   if(flag){
+       const token=sessionStorage.getItem("token")
+       if(!token){
+           return next({
+              path:'/login'
+           })
+       }
+   }
+   next() 
+})
+
+
 
 export default router

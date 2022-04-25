@@ -15,11 +15,12 @@
             v-model="form.password"
             placeholder="请输入密码"
             prefix-icon="el-icon-search"
-          ></el-input>
-        </el-form-item>
-        <el-form-item class="aaa">
+            type="password"
+          ></el-input> 
+        </el-form-item> 
+        <el-form-item class="aaa"> 
           <el-button type="primary" @click="dl">登录</el-button
-          ><el-button type="info">重置</el-button>
+          ><el-button type="info" @click="chongzhi">重置</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -32,8 +33,8 @@ export default {
   data() {
     return {
       form: {
-        username: "",
-        password: "",
+        username: "admin",
+        password: "123456",
       },
       //表单验证规则
       rules: {
@@ -47,14 +48,24 @@ export default {
   mounted() {},
   methods: {
     dl() {
-      console.log("登录啦");
+      // console.log("登录啦");
       this.$refs.form.validate(async valid => {
         if (!valid)  return false
           //成功调用后台接口
           const res = await LoginApi(this.form) 
           console.log("是否登录成功",res)  
-          this.$router.push("/AboutView")
+        
+           sessionStorage.setItem('token', res.token)
+           console.log(res.token)
+              this.$router.push("/index")
+          // this.setLocalStorage('token',res.token)
+          // this.$message.success(res) 
       })
+
+    },
+    // 重置的方法
+    chongzhi(){
+       this.$refs.form.resetFields() 
     }
   }
 };
@@ -80,7 +91,7 @@ export default {
   /* text-align: center; */
 }
 .el-input {
-  width: 400px;
+  width: 87%;
 }
 h2 {
   text-align: center;
